@@ -1,0 +1,62 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "parser":  "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true,
+      "classes": true,
+      "experimentalObjectRestSpread": true,
+      "transformClassProperties": true
+    },
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "16.8.6"
+    }
+  },
+  "globals": {
+    "test": true,
+    "afterEach": true,
+    "beforeEach": true,
+    "expect": true,
+    "describe": true,
+    "jest": true,
+    "__DEV__": true
+  },
+  "rules": {
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off",
+    "eqeqeq": ["error", "smart"],
+    "no-restricted-imports": ["error",{
+      "paths":[{
+        "name": "react-native-gesture-handler",
+        "importNames": ["FlatList"],
+        "message": "Unless you ACTUALLY need this, please use react-native instead."
+      }]
+    }],
+    "no-unused-vars": ["warn", { "ignoreRestSiblings": true, "argsIgnorePattern": "^_" }],
+    "no-var": 2,
+    "react/jsx-handler-names": "warn",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/no-deprecated": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "prettier/prettier": ["warn", { "trailingComma": "es5", "semi": false, "arrowParens": "avoid", "bracketSpacing": true }]
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "prettier"
+  ],
+  "extends": [
+    "prettier",
+    "eslint:recommended"
+  ]
+}
