@@ -16,7 +16,7 @@ If you haven't already please get your system ready to run react-native by follo
 To run the mobile app:
 ```
 npm install
-gem install
+bundle install
 
 # If running ios
 cd ios
