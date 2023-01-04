@@ -13,10 +13,15 @@ node: 16.18
 
 If you haven't already please get your system ready to run react-native by following [these instructions](https://reactnative.dev/docs/0.68/environment-setup).
 
+To start the server:
+```
+npm run server
+```
+
 To run the mobile app:
 ```
 npm install
-gem install
+bundle install
 
 # If running ios
 cd ios
@@ -27,11 +32,6 @@ npm run ios
 # Else
 npm run android
 
-```
-
-To start the server:
-```
-npm run serve
 ```
 
 ## Directions
